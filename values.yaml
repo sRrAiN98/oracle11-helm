@@ -96,7 +96,7 @@ volumes:
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts: 
   - name: oracle-data
-    mountPath: "/opt/oracle/oradata"
+    mountPath: "/u01/app/oracle/oradata"
     readOnly: false
 
 nodeSelector: {}
