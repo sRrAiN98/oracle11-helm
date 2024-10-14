@@ -81,7 +81,7 @@ autoscaling:
 
 pvc:
   enabled: true
-  storageClass: local-path 
+  storageClass: hostpath 
   size: 5Gi
 
 
