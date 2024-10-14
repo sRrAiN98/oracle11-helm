@@ -40,6 +40,9 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+            - name: db
+              containerPort: {{ .Values.service2.port }}
+              protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:

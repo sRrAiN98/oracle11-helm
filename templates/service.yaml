@@ -8,8 +8,12 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: {{ .Values.service.port }}
       protocol: TCP
       name: http
+    - port: {{ .Values.service2.port }}
+      targetPort: {{ .Values.service2.port }}
+      protocol: TCP
+      name: db
   selector:
     {{- include "oracle11.selectorLabels" . | nindent 4 }}
