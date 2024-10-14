@@ -79,16 +79,21 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
+pvc:
+  enabled: true
+  storageClass: local-path 
+  size: 5Gi
+
+
 # Additional volumes on the output Deployment definition.
 volumes: 
-  # - name: foo
-  #   secret:
-  #     secretName: mysecret
-  #     optional: false
+  - name: oracle-data
+    persistentVolumeClaim:
+      claimName: oracle11
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts: 
-  - name: oracle-data
+  - name: oracle11
     mountPath: "/opt/oracle/oradata"
     readOnly: false
 
