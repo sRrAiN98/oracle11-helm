@@ -13,7 +13,7 @@ image:
 
 env:
   ORACLE_HOME: /u01/app/oracle/product/11.2.0/xe
-  PATH: $ORACLE_HOME/bin:$PATH
+  # PATH: $ORACLE_HOME/bin:$PATH
   ORACLE_SID: XE
   
 # This is for the secretes for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
