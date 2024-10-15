@@ -31,11 +31,8 @@ podAnnotations: {}
 # This is for setting Kubernetes Labels to a Pod.
 podLabels: {}
 
-podSecurityContext: 
-  runAsUser: 1000
-  runAsGroup: 1000
-  fsGroup: 1000
-  runAsNonRoot: true
+podSecurityContext: {}
+  # fsGroup: 2000
 
 securityContext: {}
   # capabilities:
