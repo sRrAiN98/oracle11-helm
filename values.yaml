@@ -15,7 +15,7 @@ env:
   ORACLE_HOME: /u01/app/oracle/product/11.2.0/xe
   PATH: $ORACLE_HOME/bin:$PATH
   ORACLE_SID: XE
-
+  
 # This is for the secretes for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 imagePullSecrets: []
 nameOverride: ""
@@ -98,7 +98,7 @@ volumes:
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts: 
   - name: oracle-data
-    mountPath: "/u01/app"
+    mountPath: "/u01/app/oracle"
     readOnly: false
 
 nodeSelector: {}
